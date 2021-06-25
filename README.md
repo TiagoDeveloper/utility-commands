@@ -11,3 +11,8 @@
 ````
   docker-compose down -v --rmi all --remove-orphans
 ````
+## Git
+### Stash de um único arquivo 
+````
+git stash push -m <stash-name> <file-name>
+````
