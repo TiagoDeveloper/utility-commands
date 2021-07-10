@@ -11,6 +11,12 @@
 ````
   docker-compose down -v --rmi all --remove-orphans
 ````
+## Docker windows wsl
+### WSL 2 should automatically release disk space back to the host OS
+````
+  wsl --shutdown
+  optimize-vhd -Path C:\Users\<user-machine>\AppData\Local\Docker\wsl\ext4.vhdx -Mode full
+````
 ## Git
 ### Stash de um único arquivo 
 ````
