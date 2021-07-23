@@ -22,3 +22,9 @@
 ````
 git stash push -m <stash-name> <file-name>
 ````
+
+## Linux
+### Zip pasta local selecionando ou com todos os arquivos, mantendo o nome da pasta
+```
+zip -r "$(basename $(pwd)).zip" <N... names or . (all)>
+```
