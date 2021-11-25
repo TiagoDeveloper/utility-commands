@@ -28,3 +28,33 @@ git stash push -m <stash-name> <file-name>
 ```
 zip -r "$(basename $(pwd)).zip" <N... names or . (all)>
 ```
+## Java
+### Agrupando os dias úteis por mês
+```
+  import java.time.DayOfWeek;
+  import java.time.LocalDate;
+  import java.time.temporal.TemporalAdjusters;
+  import java.util.List;
+  import java.util.Map;
+  import java.util.stream.Collectors;
+  import java.util.stream.Stream;
+
+  public class WorkingDays {
+
+      public static void main(String[] args) {
+          LocalDate initial = LocalDate.of(2022, 1,1);
+
+          Map<Integer, List<LocalDate>> workingDays = Stream.iterate(initial, e -> e.plusDays(1))
+          .peek(e -> {
+              System.out.println(e+" => "+e.getDayOfWeek().name());
+          })
+          .limit(initial.with(TemporalAdjusters.lastDayOfYear()).getDayOfYear())
+          .filter(day ->
+              !(day.getDayOfWeek().equals(DayOfWeek.SATURDAY) || day.getDayOfWeek().equals(DayOfWeek.SUNDAY))
+          ).collect(Collectors.groupingBy(LocalDate::getMonthValue));
+
+          System.out.println(workingDays);
+      }
+
+  }
+```
