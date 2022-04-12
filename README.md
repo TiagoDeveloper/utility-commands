@@ -58,3 +58,12 @@ zip -r "$(basename $(pwd)).zip" <N... names or . (all)>
 
   }
 ```
+
+## Links úteis
+### Ambientes local fake da AWS
+[localstack](https://localstack.cloud/)
+### Exemplos de sql para iniciantes
+[animatesql](https://animatesql.com/)
+### Acervo de banco de dados aberto 
+[basedosdados](https://basedosdados.org/)
+
