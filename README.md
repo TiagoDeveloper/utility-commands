@@ -66,4 +66,8 @@ zip -r "$(basename $(pwd)).zip" <N... names or . (all)>
 [animatesql](https://animatesql.com/)
 ### Acervo de banco de dados aberto 
 [basedosdados](https://basedosdados.org/)
+### Calculadora científica 
+[geogebra](https://www.geogebra.org/calculator)
+
+
 
