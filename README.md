@@ -22,7 +22,14 @@
 ````
 git stash push -m <stash-name> <file-name>
 ````
-
+### Guardando o user e senha de repositorys no git
+````
+git config credential.helper store
+````
+### Guardando o user e senha de repositorys no git por tempo determinado
+````
+git config credential.helper 'cache --timeout=3600'
+````
 ## Linux
 ### Zip pasta local selecionando ou com todos os arquivos, mantendo o nome da pasta
 ```
